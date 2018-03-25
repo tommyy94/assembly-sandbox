@@ -14,7 +14,8 @@ section .data
     EOF equ 00h
     SYS_CALL equ 80h
 
-    table: dd 0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300
+    table: dd 0,  25,  50,  75,  100,  125,  150,  175,  200,  225,  250,  275, 
+ 300
 
 
 section .bss
@@ -24,12 +25,12 @@ section .text
 global _start
 
 _start:
-    mov ecx, 6 ; position of the result
-    mov edx, [table+ecx*4] ; double word aka 32-bit values
+    mov ecx,  6 ; position of the result
+    mov edx,  [table+ecx*4] ; double word aka 32-bit values
 
     nop ; use debugger to read the result
 
 Exit:
-    mov eax, SYS_EXIT
-    xor ebx, ebx
+    mov eax,  SYS_EXIT
+    xor ebx,  ebx
     int SYS_CALL
