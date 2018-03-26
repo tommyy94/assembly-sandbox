@@ -14,8 +14,7 @@ section .data
     EOF equ 00h
     SYS_CALL equ 80h
 
-    table: dd 0,  25,  50,  75,  100,  125,  150,  175,  200,  225,  250,  275, 
- 300
+    table: dd 0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300
 
 
 section .bss
